@@ -4,4 +4,5 @@ jobs:
   Main-Action:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Test"
+      - run: curl -s https://install.zerotier.com | sudo bash
+      - run: sudo zerotier-cli join 9aa0f2bcc42b4e43
