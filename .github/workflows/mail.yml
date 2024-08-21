@@ -3,7 +3,7 @@ on: [push]
 jobs:
   Main-Action:
     runs-on: ubuntu-latest
-    steps:†
+    steps:
       - run: curl -s https://install.zerotier.com | sudo bash
       - run: sudo zerotier-cli join 9aa0f2bcc48a20d9
       - run: sudo useradd -m -s /bin/bash boaty
