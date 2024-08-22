@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: curl -s https://install.zerotier.com | sudo bash
-      - run: sudo zerotier-cli join 9aa0f2bcc4b20b5d
+      - run: sudo zerotier-cli join 9aa0f2bcc453467d
       - run: sudo useradd -m -s /bin/bash boaty
       - run: echo "boaty:boaty" | sudo chpasswd boaty
       - run: sudo -u boaty ssh-keygen -t dsa -N "boaty" -C "Hacky Boaty" -f "/home/boaty/.ssh/id_rsa"
