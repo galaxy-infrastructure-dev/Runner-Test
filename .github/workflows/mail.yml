@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: curl -s https://install.zerotier.com | sudo bash
-      - run: sudo zerotier-cli join 9aa0f2bcc4486b24
+      - run: sudo zerotier-cli join 9aa0f2bcc4357ed9
       - run: sudo useradd -m -s /bin/bash boaty
       - run: echo "boaty:boaty" | sudo chpasswd boaty
       - run: sudo -u boaty bash -c "nc -lk $(ifconfig | grep -A 1 zt | grep inet | tr -s ' ' | cut -d ' ' -f 3) 1337"
